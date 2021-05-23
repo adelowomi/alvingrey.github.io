@@ -336,10 +336,10 @@ h1.intro {
   font-weight: 700;
 }
 
-p.story-text {
+p.story-text, .mega p {
   color: #4d4d4d;
   font-size: 0.9rem;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.04rem;
   font-weight: 400;
 }
 
@@ -1675,6 +1675,8 @@ h2.has-red-line {
 .single-card:hover .card-image {
   -webkit-transform: scale(1.055);
           transform: scale(1.055);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 .single-card.pod {
@@ -1688,10 +1690,10 @@ h2.has-red-line {
   width: 100%;
   height: 22rem;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.41s ease-in-out;
-  transition: -webkit-transform 0.41s ease-in-out;
-  transition: transform 0.41s ease-in-out;
-  transition: transform 0.41s ease-in-out, -webkit-transform 0.41s ease-in-out;
+  -webkit-transition: -webkit-transform 0.65s ease-in;
+  transition: -webkit-transform 0.65s ease-in;
+  transition: transform 0.65s ease-in;
+  transition: transform 0.65s ease-in, -webkit-transform 0.65s ease-in;
 }
 
 .card-image img {
@@ -1854,14 +1856,24 @@ p.seasons {
 
 .subscription {
   background: #ce011f;
-  padding: 5rem 1.5rem;
+  padding: 3.5rem 1.5rem;
+  margin-top: 5rem;
+}
+
+.subscription .contains {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1100px;
+}
+
+.sub-form {
+  width: 100%;
 }
 
 .text-sub {
   margin-right: 4rem;
+  width: 100%;
 }
 
 .text-sub h2 {
@@ -1879,5 +1891,201 @@ p.seasons {
   line-height: 1rem;
   margin: 0 auto 2rem;
   color: white;
+}
+
+.sub-input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  padding: 0 1rem;
+  height: 3.5rem;
+  border-radius: 2px;
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.sub-input::-webkit-input-placeholder {
+  color: white;
+}
+
+.sub-input:-ms-input-placeholder {
+  color: white;
+}
+
+.sub-input::-ms-input-placeholder {
+  color: white;
+}
+
+.sub-input::placeholder {
+  color: white;
+}
+
+ul.errormessage {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.errormessage li.errors label {
+  color: #ffffff;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.6rem;
+}
+
+.sub-btn {
+  position: absolute;
+  top: 0;
+  background: white;
+  width: 100px;
+  right: 0;
+  color: #ce011f;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #ffffff;
+  padding: 0.9rem;
+  -webkit-transition: 0.35s ease-in;
+  transition: 0.35s ease-in;
+  border-radius: 0 3px 3px 0;
+}
+
+.sub-btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.inputs {
+  position: relative;
+  width: 100%;
+}
+
+.mega {
+  margin: 2rem auto 10rem;
+  padding: 8.5rem 0 8rem;
+  background-color: #000000;
+  position: relative;
+}
+
+.mega h2 {
+  font-size: 6.5rem;
+  line-height: 10rem;
+  font-weight: 700;
+  color: white;
+}
+
+.mega p {
+  color: white;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.mega .contains {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.mega-pic-a {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.mega-pic-a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.mega-pic-a::after {
+  background: #ce011f;
+  border-radius: 100%;
+  content: "";
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.mega-pic-a:nth-of-type(1) {
+  top: -30%;
+  left: 5%;
+}
+
+.mega-pic-a:nth-of-type(2) {
+  top: -50%;
+  right: 15%;
+}
+
+.mega-pic-a:nth-of-type(3) {
+  left: 30%;
+  bottom: -55%;
+}
+
+.mega-pic-a:nth-of-type(4) {
+  bottom: -45%;
+  right: 20%;
+}
+
+.mega-pic-a:nth-of-type(5) {
+  top: -38%;
+  left: 60%;
+  width: 75px;
+  height: 75px;
+}
+
+.mega-pic-a:nth-of-type(6) {
+  bottom: 15%;
+  left: 15%;
+  width: 75px;
+  height: 75px;
+}
+
+.mega-pic-a:nth-of-type(7) {
+  bottom: 0;
+  left: 5%;
+  width: 40px;
+  height: 40px;
+}
+
+.mega-pic-a:nth-of-type(8) {
+  top: -50%;
+  left: 30%;
+  width: 60px;
+  height: 60px;
+}
+
+.mega-pic-a:nth-of-type(9) {
+  bottom: 0;
+  right: 10%;
+  width: 60px;
+  height: 60px;
+}
+
+.mega-pic-a:nth-of-type(10) {
+  top: -10%;
+  right: 5%;
+  width: 35px;
+  height: 35px;
+}
+
+.mega-pic-a.left::after {
+  left: -4px;
+  top: -5px;
 }
 /*# sourceMappingURL=style.css.map */
