@@ -123,6 +123,8 @@ ul.topnavmenu li.topnavlink:last-child {
   transition: background 0.35s ease-in;
   z-index: 100;
   width: 100%;
+  -webkit-box-shadow: 0 0 15px rgba(207, 207, 207, 0.13);
+          box-shadow: 0 0 15px rgba(207, 207, 207, 0.13);
 }
 
 .menu.scrolled {
@@ -190,6 +192,7 @@ ul.topnavmenu li.topnavlink:last-child {
   transition: all 0.5s ease;
   border-radius: 3px;
   background-color: transparent;
+  font-size: 0.9rem;
 }
 
 .action-btn.red-bg {
@@ -244,6 +247,20 @@ ul.topnavmenu li.topnavlink:last-child {
 }
 
 .action-btn.black:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.action-btn.black-nm {
+  border-color: black;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: black;
+  margin: 0 0 2rem;
+}
+
+.action-btn.black-nm:hover {
   background-color: transparent;
   color: black;
 }
@@ -341,6 +358,10 @@ p.story-text, .mega p {
   font-size: 0.9rem;
   letter-spacing: 0.04rem;
   font-weight: 400;
+}
+
+p.story-text.hgt, .mega p.hgt {
+  line-height: 1.9rem;
 }
 
 .new-section {
@@ -1629,6 +1650,18 @@ h2.has-red-line {
   color: black;
 }
 
+h4.has-red-line {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  line-height: 1.4rem;
+  margin: 0 auto 2rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  position: relative;
+  color: black;
+}
+
 .card-container {
   display: -ms-grid;
   display: grid;
@@ -2087,5 +2120,155 @@ ul.errormessage li.errors label {
 .mega-pic-a.left::after {
   left: -4px;
   top: -5px;
+}
+
+.headquater-section {
+  margin: 3rem auto;
+}
+
+.quater-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin: 0 auto 3rem;
+}
+
+.statement-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 7rem auto;
+}
+
+.statement-image {
+  width: 80%;
+  height: auto;
+  margin: 3.5rem 0 3.5rem auto;
+}
+
+.statement-image img {
+  width: 100%;
+  height: auto;
+}
+
+.statement-box {
+  padding: 3.5rem 5rem;
+  background-color: black;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  max-width: 515px;
+  margin-bottom: -33%;
+  z-index: 1;
+}
+
+h1.statement {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 2rem;
+}
+
+h1.statement a {
+  color: white;
+  text-decoration: underline;
+}
+
+h4.award-head {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  line-height: 1rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.award-carousel {
+  width: 100%;
+  display: block;
+  background: url(https://headquarters.kw.com/wp-content/uploads/2019/11/Award_Slider_Bckground.png) no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 25%;
+  min-height: 300px;
+  max-height: 450px;
+  overflow: hidden;
+}
+
+.award-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.award-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.award-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1024px;
+  margin: 2.5rem auto;
+}
+
+.single-logo {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  margin: 0 1rem;
+  opacity: 0.35;
+  -webkit-transition: opacity 0.42s ease-in;
+  transition: opacity 0.42s ease-in;
+  width: 100%;
+}
+
+.single-logo img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 120px;
+  min-width: 50px;
+}
+
+.single-logo:hover {
+  opacity: 1;
+}
+
+.single-logo.active {
+  opacity: 1;
+}
+
+.award-carousel-section {
+  margin: 2rem auto 5rem;
+}
+
+.pattern-section {
+  background: url("https://headquarters.kw.com/wp-content/themes/kw-hq/_assets/images/pattern-light.svg") repeat 50% 50%;
+  background-size: 250px;
+  padding: 3rem 0;
 }
 /*# sourceMappingURL=style.css.map */
